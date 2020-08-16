@@ -9,7 +9,7 @@ pool:
 # Does not work without this:
 variables:
   secretVar:  $[ variables['secretVar'] ]
-  publicVar:  $[ variables['publicVar'] ]
+  publicVar2:  $[ variables['publicVar2'] ]
   unsetVar:  $[ variables['unsetVar'] ]
 
 
@@ -23,12 +23,12 @@ steps:
     echo 'secretVar_NoVariablesBlock_Runtime is:'     "$secretVar_NoVariablesBlock_RunTime"
 
     echo
-    echo 'publicVar_Macro is:'       "$publicVar_Macro"
-    echo 'publicVar_CompileTime is:' "$publicVar_CompileTime"
-    echo 'publicVar_Runtime is:'     "$publicVar_RunTime"
-    echo 'publicVar_NoVariablesBlock_Macro is:'       "$publicVar_NoVariablesBlock_Macro"
-    echo 'publicVar_NoVariablesBlock_CompileTime is:' "$publicVar_NoVariablesBlock_CompileTime"
-    echo 'publicVar_NoVariablesBlock_Runtime is:'     "$publicVar_NoVariablesBlock_RunTime"
+    echo 'publicVar2_Macro is:'       "$publicVar2_Macro"
+    echo 'publicVar2_CompileTime is:' "$publicVar2_CompileTime"
+    echo 'publicVar2_Runtime is:'     "$publicVar2_RunTime"
+    echo 'publicVar2_NoVariablesBlock_Macro is:'       "$publicVar2_NoVariablesBlock_Macro"
+    echo 'publicVar2_NoVariablesBlock_CompileTime is:' "$publicVar2_NoVariablesBlock_CompileTime"
+    echo 'publicVar2_NoVariablesBlock_Runtime is:'     "$publicVar2_NoVariablesBlock_RunTime"
 
     echo
     echo 'unsetVar_Macro is:'       "$unsetVar_Macro"
@@ -43,9 +43,9 @@ steps:
     secretVar_Macro: $(secretVar)
     secretVar_CompileTime: ${{variables.secretVar}}
     secretVar_Runtime: $[ variables['secretVar'] ]
-    publicVar_Macro: $(publicVar)
-    publicVar_CompileTime: ${{variables.publicVar}}
-    publicVar_Runtime: $[ variables['publicVar'] ]
+    publicVar2_Macro: $(publicVar2)
+    publicVar2_CompileTime: ${{variables.publicVar2}}
+    publicVar2_Runtime: $[ variables['publicVar2'] ]
     unsetVar_Macro: $(unsetVar)
     unsetVar_CompileTime: ${{variables.unsetVar}}
     unsetVar_Runtime: $[ variables['unsetVar'] ]
@@ -62,12 +62,12 @@ steps:
     echo 'secretVar_NoVariablesBlock_Runtime is:'     "$secretVar_NoVariablesBlock_RunTime"
 
     echo
-    echo 'publicVar_Macro is:'       "$publicVar_Macro"
-    echo 'publicVar_CompileTime is:' "$publicVar_CompileTime"
-    echo 'publicVar_Runtime is:'     "$publicVar_RunTime"
-    echo 'publicVar_NoVariablesBlock_Macro is:'       "$publicVar_NoVariablesBlock_Macro"
-    echo 'publicVar_NoVariablesBlock_CompileTime is:' "$publicVar_NoVariablesBlock_CompileTime"
-    echo 'publicVar_NoVariablesBlock_Runtime is:'     "$publicVar_NoVariablesBlock_RunTime"
+    echo 'publicVar2_Macro is:'       "$publicVar2_Macro"
+    echo 'publicVar2_CompileTime is:' "$publicVar2_CompileTime"
+    echo 'publicVar2_Runtime is:'     "$publicVar2_RunTime"
+    echo 'publicVar2_NoVariablesBlock_Macro is:'       "$publicVar2_NoVariablesBlock_Macro"
+    echo 'publicVar2_NoVariablesBlock_CompileTime is:' "$publicVar2_NoVariablesBlock_CompileTime"
+    echo 'publicVar2_NoVariablesBlock_Runtime is:'     "$publicVar2_NoVariablesBlock_RunTime"
 
     echo
     echo 'unsetVar_Macro" is:'       "$unsetVar_Macro"
@@ -92,18 +92,18 @@ steps:
     test "$secretVar_NoVariablesBlock_Runtime" && echo "truthy" || echo "falsy"
 
     echo
-    echo 'publicVar_Macro is:'         "$publicVar_Macro"
-    test "$publicVar_Macro" && echo "truthy" || echo "falsy"
-    echo 'publicVar_CompileTime is:'   "$publicVar_CompileTime"
-    test "$publicVar_CompileTime" && echo "truthy" || echo "falsy"
-    echo 'publicVar_Runtime is:'       "$publicVar_RunTime"
-    test "$publicVar_Runtime" && echo "truthy" || echo "falsy"
-    echo 'publicVar_NoVariablesBlock_Macro is:'       "$publicVar_NoVariablesBlock_Macro"
-    test "$publicVar_NoVariablesBlock_Macro" && echo "truthy" || echo "falsy"
-    echo 'publicVar_NoVariablesBlock_CompileTime is:' "$publicVar_NoVariablesBlock_CompileTime"
-    test "$publicVar_NoVariablesBlock_CompileTime" && echo "truthy" || echo "falsy"
-    echo 'publicVar_NoVariablesBlock_Runtime is:'     "$publicVar_NoVariablesBlock_RunTime"
-    test "$publicVar_NoVariablesBlock_Runtime" && echo "truthy" || echo "falsy"
+    echo 'publicVar2_Macro is:'         "$publicVar2_Macro"
+    test "$publicVar2_Macro" && echo "truthy" || echo "falsy"
+    echo 'publicVar2_CompileTime is:'   "$publicVar2_CompileTime"
+    test "$publicVar2_CompileTime" && echo "truthy" || echo "falsy"
+    echo 'publicVar2_Runtime is:'       "$publicVar2_RunTime"
+    test "$publicVar2_Runtime" && echo "truthy" || echo "falsy"
+    echo 'publicVar2_NoVariablesBlock_Macro is:'       "$publicVar2_NoVariablesBlock_Macro"
+    test "$publicVar2_NoVariablesBlock_Macro" && echo "truthy" || echo "falsy"
+    echo 'publicVar2_NoVariablesBlock_CompileTime is:' "$publicVar2_NoVariablesBlock_CompileTime"
+    test "$publicVar2_NoVariablesBlock_CompileTime" && echo "truthy" || echo "falsy"
+    echo 'publicVar2_NoVariablesBlock_Runtime is:'     "$publicVar2_NoVariablesBlock_RunTime"
+    test "$publicVar2_NoVariablesBlock_Runtime" && echo "truthy" || echo "falsy"
 
     echo
     echo 'unsetVar_Macro is:'         "$unsetVar_Macro"
@@ -123,9 +123,9 @@ steps:
     secretVar_Macro: $(secretVar)
     secretVar_CompileTime: ${{variables.secretVar}}
     secretVar_Runtime: $[ variables['secretVar'] ]
-    publicVar_Macro: $(publicVar)
-    publicVar_CompileTime: ${{variables.publicVar}}
-    publicVar_Runtime: $[ variables['publicVar'] ]
+    publicVar2_Macro: $(publicVar2)
+    publicVar2_CompileTime: ${{variables.publicVar2}}
+    publicVar2_Runtime: $[ variables['publicVar2'] ]
     unsetVar_Macro: $(unsetVar)
     unsetVar_CompileTime: ${{variables.unsetVar}}
     unsetVar_Runtime: $[ variables['unsetVar'] ]
