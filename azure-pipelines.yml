@@ -43,12 +43,21 @@ steps:
     secretVar_Macro: $(secretVar)
     secretVar_CompileTime: ${{variables.secretVar}}
     secretVar_Runtime: $[ variables['secretVar'] ]
+    secretVar_NoVariablesBlock_Macro: $(secretVar)
+    secretVar_NoVariablesBlock_CompileTime: ${{variables.secretVar}}
+    secretVar_NoVariablesBlock_Runtime: $[ variables['secretVar'] ]
     publicVar2_Macro: $(publicVar2)
     publicVar2_CompileTime: ${{variables.publicVar2}}
     publicVar2_Runtime: $[ variables['publicVar2'] ]
+    publicVar2_NoVariablesBlock_Macro: $(publicVar2)
+    publicVar2_NoVariablesBlock_CompileTime: ${{variables.publicVar2}}
+    publicVar2_NoVariablesBlock_Runtime: $[ variables['publicVar2'] ]
     unsetVar_Macro: $(unsetVar)
     unsetVar_CompileTime: ${{variables.unsetVar}}
     unsetVar_Runtime: $[ variables['unsetVar'] ]
+    unsetVar_NoVariablesBlock_Macro: $(unsetVar)
+    unsetVar_NoVariablesBlock_CompileTime: ${{variables.unsetVar}}
+    unsetVar_NoVariablesBlock_Runtime: $[ variables['unsetVar'] ]
 
 - script: |
     echo
@@ -123,9 +132,18 @@ steps:
     secretVar_Macro: $(secretVar)
     secretVar_CompileTime: ${{variables.secretVar}}
     secretVar_Runtime: $[ variables['secretVar'] ]
+    secretVar_NoVariablesBlock_Macro: $(secretVar)
+    secretVar_NoVariablesBlock_CompileTime: ${{variables.secretVar}}
+    secretVar_NoVariablesBlock_Runtime: $[ variables['secretVar'] ]
     publicVar2_Macro: $(publicVar2)
     publicVar2_CompileTime: ${{variables.publicVar2}}
     publicVar2_Runtime: $[ variables['publicVar2'] ]
+    publicVar2_NoVariablesBlock_Macro: $(publicVar2)
+    publicVar2_NoVariablesBlock_CompileTime: ${{variables.publicVar2}}
+    publicVar2_NoVariablesBlock_Runtime: $[ variables['publicVar2'] ]
     unsetVar_Macro: $(unsetVar)
     unsetVar_CompileTime: ${{variables.unsetVar}}
     unsetVar_Runtime: $[ variables['unsetVar'] ]
+    unsetVar_NoVariablesBlock_Macro: $(unsetVar)
+    unsetVar_NoVariablesBlock_CompileTime: ${{variables.unsetVar}}
+    unsetVar_NoVariablesBlock_Runtime: $[ variables['unsetVar'] ]
