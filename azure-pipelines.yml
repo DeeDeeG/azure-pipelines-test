@@ -11,16 +11,16 @@ variables:
   secretVar:  $[ variables['secretVar'] ]
 
 steps:
-- pwsh: |      
-    echo 'secretVar_Macro is:'       $env:secretVar_Macro
-    echo 'secretVar_CompileTime is:' $env:secretVar_CompileTime
-    echo 'secretVar_Runtime is:'     $env:secretVar_Runtime
-    echo 'unsecretVar_Macro is:'       $env:unsecretVar_Macro
-    echo 'unsecretVar_CompileTime is:' $env:unsecretVar_CompileTime
-    echo 'unsecretVar_Runtime is:'     $env:unsecretVar_Runtime
-    echo 'unsetVar_Macro is:'       $env:unsetVar_Macro
-    echo 'unsetVar_CompileTime is:' $env:unsetVar_CompileTime
-    echo 'unsetVar_Runtime is:'     $env:unsetVar_Runtime
+- script: |      
+    echo 'secretVar_Macro is:'       $secretVar_Macro
+    echo 'secretVar_CompileTime is:' $secretVar_CompileTime
+    echo 'secretVar_Runtime is:'     $secretVar_Runtime
+    echo 'unsecretVar_Macro is:'       $unsecretVar_Macro
+    echo 'unsecretVar_CompileTime is:' $unsecretVar_CompileTime
+    echo 'unsecretVar_Runtime is:'     $unsecretVar_Runtime
+    echo 'unsetVar_Macro is:'       $unsetVar_Macro
+    echo 'unsetVar_CompileTime is:' $unsetVar_CompileTime
+    echo 'unsetVar_Runtime is:'     $unsetVar_Runtime
 
   env:
     secretVar_Macro: $(secretVar)
