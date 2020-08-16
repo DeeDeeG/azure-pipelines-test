@@ -9,7 +9,7 @@ pool:
 # Does not work without this:
 variables:
   secretVar:  $[ variables['secretVar'] ]
-  unsecretVar:  $[ variables['unsecretVar'] ]
+  publicVar:  $[ variables['publicVar'] ]
   unsetVar:  $[ variables['unsetVar'] ]
 
 
@@ -22,12 +22,12 @@ steps:
     echo 'secretVar_NoVariablesBlock_CompileTime is:' $secretVar_NoVariablesBlock_CompileTime
     echo 'secretVar_NoVariablesBlock_Runtime is:'     $secretVar_NoVariablesBlock_Runtime
 
-    echo 'unsecretVar_Macro is:'       $unsecretVar_Macro
-    echo 'unsecretVar_CompileTime is:' $unsecretVar_CompileTime
-    echo 'unsecretVar_Runtime is:'     $unsecretVar_Runtime
-    echo 'unsecretVar_NoVariablesBlock_Macro is:'       $unsecretVar_NoVariablesBlock_Macro
-    echo 'unsecretVar_NoVariablesBlock_CompileTime is:' $unsecretVar_NoVariablesBlock_CompileTime
-    echo 'unsecretVar_NoVariablesBlock_Runtime is:'     $unsecretVar_NoVariablesBlock_Runtime
+    echo 'publicVar_Macro is:'       $publicVar_Macro
+    echo 'publicVar_CompileTime is:' $publicVar_CompileTime
+    echo 'publicVar_Runtime is:'     $publicVar_Runtime
+    echo 'publicVar_NoVariablesBlock_Macro is:'       $publicVar_NoVariablesBlock_Macro
+    echo 'publicVar_NoVariablesBlock_CompileTime is:' $publicVar_NoVariablesBlock_CompileTime
+    echo 'publicVar_NoVariablesBlock_Runtime is:'     $publicVar_NoVariablesBlock_Runtime
 
     echo 'unsetVar_Macro is:'       $unsetVar_Macro
     echo 'unsetVar_CompileTime is:' $unsetVar_CompileTime
@@ -41,9 +41,9 @@ steps:
     secretVar_Macro: $(secretVar)
     secretVar_CompileTime: ${{variables.secretVar}}
     secretVar_Runtime: $[ variables['secretVar'] ]
-    unsecretVar_Macro: $(unsecretVar)
-    unsecretVar_CompileTime: ${{variables.unsecretVar}}
-    unsecretVar_Runtime: $[ variables['unsecretVar'] ]
+    publicVar_Macro: $(publicVar)
+    publicVar_CompileTime: ${{variables.publicVar}}
+    publicVar_Runtime: $[ variables['publicVar'] ]
     unsetVar_Macro: $(unsetVar)
     unsetVar_CompileTime: ${{variables.unsetVar}}
     unsetVar_Runtime: $[ variables['unsetVar'] ]
@@ -59,12 +59,12 @@ steps:
     echo 'secretVar_NoVariablesBlock_CompileTime is:' $secretVar_NoVariablesBlock_CompileTime
     echo 'secretVar_NoVariablesBlock_Runtime is:'     $secretVar_NoVariablesBlock_Runtime
 
-    echo 'unsecretVar_Macro is:'       $unsecretVar_Macro
-    echo 'unsecretVar_CompileTime is:' $unsecretVar_CompileTime
-    echo 'unsecretVar_Runtime is:'     $unsecretVar_Runtime
-    echo 'unsecretVar_NoVariablesBlock_Macro is:'       $unsecretVar_NoVariablesBlock_Macro
-    echo 'unsecretVar_NoVariablesBlock_CompileTime is:' $unsecretVar_NoVariablesBlock_CompileTime
-    echo 'unsecretVar_NoVariablesBlock_Runtime is:'     $unsecretVar_NoVariablesBlock_Runtime
+    echo 'publicVar_Macro is:'       $publicVar_Macro
+    echo 'publicVar_CompileTime is:' $publicVar_CompileTime
+    echo 'publicVar_Runtime is:'     $publicVar_Runtime
+    echo 'publicVar_NoVariablesBlock_Macro is:'       $publicVar_NoVariablesBlock_Macro
+    echo 'publicVar_NoVariablesBlock_CompileTime is:' $publicVar_NoVariablesBlock_CompileTime
+    echo 'publicVar_NoVariablesBlock_Runtime is:'     $publicVar_NoVariablesBlock_Runtime
 
     echo 'unsetVar_Macro is:'       $unsetVar_Macro
     echo 'unsetVar_CompileTime is:' $unsetVar_CompileTime
