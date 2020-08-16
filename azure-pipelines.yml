@@ -8,15 +8,21 @@ pool:
   
 # Does not work without this:
 # variables:
-  # secrectVar:  $[ variables['secrectVar'] ]
+  # secretVar:  $[ variables['secretVar'] ]
 
 steps:
 - pwsh: |      
-    echo secrectVar_Macro       $env:secrectVar_Macro
-    echo secrectVar_CompileTime $env:secrectVar_CompileTime
-    echo secrectVar_Runtime     $env:secrectVar_Runtime
+    echo secretVar_Macro       $env:secretVar_Macro
+    echo secretVar_CompileTime $env:secretVar_CompileTime
+    echo secretVar_Runtime     $env:secretVar_Runtime
+    echo unsecretVar_Macro       $env:unsecretVar_Macro
+    echo unsecretVar_CompileTime $env:unsecretVar_CompileTime
+    echo unsecretVar_Runtime     $env:unsecretVar_Runtime
 
   env:
-    secrectVar_Macro: $(secrectVar)
-    secrectVar_CompileTime: ${{variables.secrectVar}}
-    secrectVar_Runtime: $[ variables['secrectVar'] ]
+    secretVar_Macro: $(secretVar)
+    secretVar_CompileTime: ${{variables.secretVar}}
+    secretVar_Runtime: $[ variables['secretVar'] ]
+    unsecretVar_Macro: $(unsecretVar)
+    unsecretVar_CompileTime: ${{variables.unsecretVar}}
+    unsecretVar_Runtime: $[ variables['unsecretVar'] ]
