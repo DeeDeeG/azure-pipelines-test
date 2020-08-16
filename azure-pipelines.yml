@@ -49,9 +49,9 @@ steps:
     publicVar_Macro: $(publicVar)
     publicVar_CompileTime: ${{variables.publicVar}}
     publicVar_Runtime: $[ variables['publicVar'] ]
-    publicVar_NoVariablesBlock_Macro: $(publicVar2_NoVariablesBlock)
-    publicVar_NoVariablesBlock_CompileTime: ${{variables.publicVar2_NoVariablesBlock}}
-    publicVar_NoVariablesBlock_Runtime: $[ variables['publicVar2_NoVariablesBlock'] ]
+    publicVar_NoVariablesBlock_Macro: $(publicVar_NoVariablesBlock)
+    publicVar_NoVariablesBlock_CompileTime: ${{variables.publicVar_NoVariablesBlock}}
+    publicVar_NoVariablesBlock_Runtime: $[ variables['publicVar_NoVariablesBlock'] ]
     unsetVar_Macro: $(unsetVar)
     unsetVar_CompileTime: ${{variables.unsetVar}}
     unsetVar_Runtime: $[ variables['unsetVar'] ]
@@ -138,9 +138,9 @@ steps:
     publicVar_Macro: $(publicVar)
     publicVar_CompileTime: ${{variables.publicVar}}
     publicVar_Runtime: $[ variables['publicVar'] ]
-    publicVar_NoVariablesBlock_Macro: $(publicVar2_NoVariablesBlock)
-    publicVar_NoVariablesBlock_CompileTime: ${{variables.publicVar2_NoVariablesBlock}}
-    publicVar_NoVariablesBlock_Runtime: $[ variables['publicVar2_NoVariablesBlock'] ]
+    publicVar_NoVariablesBlock_Macro: $(publicVar_NoVariablesBlock)
+    publicVar_NoVariablesBlock_CompileTime: ${{variables.publicVar_NoVariablesBlock}}
+    publicVar_NoVariablesBlock_Runtime: $[ variables['publicVar_NoVariablesBlock'] ]
     unsetVar_Macro: $(unsetVar)
     unsetVar_CompileTime: ${{variables.unsetVar}}
     unsetVar_Runtime: $[ variables['unsetVar'] ]
