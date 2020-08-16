@@ -3,6 +3,9 @@
 variables:
  GLOBAL_MYSECRET: $(mySecret) # this will not work because the secret variable needs to be mapped as env
  GLOBAL_MY_MAPPED_ENV_VAR: $(nonSecretVariable) # this works because it's not a secret.
+ GLOBAL_MYSECRET_UNSET: $(mySecretUnset) # Testing
+ GLOBAL_MY_MAPPED_ENV_VAR_UNSET: $(nonSecretVariableUnset) # 
+
 
 steps:
 
@@ -19,3 +22,17 @@ steps:
 
   env:
     MY_MAPPED_ENV_VAR: $(mySecret) # the recommended way to map to an env variable
+
+- powershell: |
+    Write-Host "Using an input-macro works: $(mySecretUnset)"
+
+    Write-Host "Using the env var directly does not work: $env:MYSECRET"
+
+    Write-Host "Using a global secret var mapped in the pipeline does not work either: $env:GLOBAL_MYSECRET_UNSET"
+
+    Write-Host "Using a global non-secret var mapped in the pipeline works: $env:GLOBAL_MY_MAPPED_ENV_VAR_UNSET" 
+
+    Write-Host "Using the mapped env var for this task works and is recommended: $env:MY_MAPPED_ENV_VAR"
+
+  env:
+    MY_MAPPED_ENV_VAR: $(mySecretUnset) # the recommended way to map to an env variable
