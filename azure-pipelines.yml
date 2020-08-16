@@ -9,7 +9,6 @@ pool:
 # Does not work without this:
 variables:
   secretVar:  $[ variables['secretVar'] ]
-  unsecretVar:  $[ variables['unsecretVar'] ]
 
 steps:
 - pwsh: |      
