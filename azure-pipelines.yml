@@ -18,6 +18,9 @@ steps:
     echo 'unsecretVar_Macro is:'       $env:unsecretVar_Macro
     echo 'unsecretVar_CompileTime is:' $env:unsecretVar_CompileTime
     echo 'unsecretVar_Runtime is:'     $env:unsecretVar_Runtime
+    echo 'unsetVar_Macro is:'       $env:unsetVar_Macro
+    echo 'unsetVar_CompileTime is:' $env:unsetVar_CompileTime
+    echo 'unsetVar_Runtime is:'     $env:unsetVar_Runtime
 
   env:
     secretVar_Macro: $(secretVar)
@@ -26,3 +29,6 @@ steps:
     unsecretVar_Macro: $(unsecretVar)
     unsecretVar_CompileTime: ${{variables.unsecretVar}}
     unsecretVar_Runtime: $[ variables['unsecretVar'] ]
+    unsetVar_Macro: $(unsetVar)
+    unsetVar_CompileTime: ${{variables.unsetVar}}
+    unsetVar_Runtime: $[ variables['unsetVar'] ]
