@@ -5,7 +5,7 @@ pool:
 # Does not work without this:
 variables:
   secretVarCopy: $[ variables['MY_SECRET_VAR'] ]
-  unsetVarCopy: $[ variables['MY_UNSET_VAR']]
+  unsetVarCopy: $[ variables['MY_UNSET_VAR'] ]
 
 steps:
 - pwsh: node thing.js
