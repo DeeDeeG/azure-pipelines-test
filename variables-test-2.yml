@@ -6,11 +6,6 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-variables:
-  securedVar:  ${{variables.securedVar}}
-  publicVar:  ${{variables.publicVar}}
-  unsetVar:  ${{variables.unsetVar}}
-
 steps:
 - script: |      
     echo 'securedVar_Macro is:'         $securedVar_Macro
@@ -36,6 +31,10 @@ steps:
     echo 'unsetVar_NoVariablesBlock_CompileTime is:' $unsetVar_NoVariablesBlock_CompileTime
     echo 'unsetVar_NoVariablesBlock_Runtime is:'     $unsetVar_NoVariablesBlock_Runtime
 
+  variables:
+    securedVar:  ${{variables.securedVar}}
+    publicVar:  ${{variables.publicVar}}
+    unsetVar:  ${{variables.unsetVar}}
 
   env:
     securedVar_Macro: $(securedVar)
@@ -84,6 +83,11 @@ steps:
     echo 'unsetVar_NoVariablesBlock_CompileTime is:' $unsetVar_NoVariablesBlock_CompileTime
     echo 'unsetVar_NoVariablesBlock_Runtime is:'     $unsetVar_NoVariablesBlock_Runtime
 
+  variables:
+    securedVar:  ${{variables.securedVar}}
+    publicVar:  ${{variables.publicVar}}
+    unsetVar:  ${{variables.unsetVar}}
+
 - script: |      
     echo 'securedVar_Macro is:'         $securedVar_Macro
     test "$securedVar_Macro" && echo "truthy" || echo "falsy"
@@ -125,6 +129,11 @@ steps:
     test "$unsetVar_NoVariablesBlock_CompileTime" && echo "truthy" || echo "falsy"
     echo 'unsetVar_NoVariablesBlock_Runtime is:'     $unsetVar_NoVariablesBlock_Runtime
     test "$unsetVar_NoVariablesBlock_Runtime" && echo "truthy" || echo "falsy"
+
+  variables:
+    securedVar:  ${{variables.securedVar}}
+    publicVar:  ${{variables.publicVar}}
+    unsetVar:  ${{variables.unsetVar}}
 
   env:
     securedVar_Macro: $(securedVar)
