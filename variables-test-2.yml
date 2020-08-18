@@ -35,22 +35,22 @@ steps:
   env:
     securedVar_Macro: $(securedVar)
     securedVar_CompileTime: ${{variables.securedVar}}
-    securedVar_Runtime: $[ variables['securedVar'] ]
+    securedVar_Runtime: $[variables.securedVar]
     securedVar_NoVariablesBlock_Macro: $(securedVar_NoVariablesBlock)
     securedVar_NoVariablesBlock_CompileTime: ${{variables.securedVar_NoVariablesBlock}}
-    securedVar_NoVariablesBlock_Runtime: $[ variables['securedVar_NoVariablesBlock'] ]
+    securedVar_NoVariablesBlock_Runtime: $[variables.securedVar_NoVariablesBlock]
     publicVar_Macro: $(publicVar)
     publicVar_CompileTime: ${{variables.publicVar}}
-    publicVar_Runtime: $[ variables['publicVar'] ]
+    publicVar_Runtime: $[variables.publicVar]
     publicVar_NoVariablesBlock_Macro: $(publicVar_NoVariablesBlock)
     publicVar_NoVariablesBlock_CompileTime: ${{variables.publicVar_NoVariablesBlock}}
-    publicVar_NoVariablesBlock_Runtime: $[ variables['publicVar_NoVariablesBlock'] ]
+    publicVar_NoVariablesBlock_Runtime: $[variables.publicVar_NoVariablesBlock]
     unsetVar_Macro: $(unsetVar)
     unsetVar_CompileTime: ${{variables.unsetVar}}
-    unsetVar_Runtime: $[ variables['unsetVar'] ]
+    unsetVar_Runtime: $[variables.unsetVar]
     unsetVar_NoVariablesBlock_Macro: $(unsetVar_NoVariablesBlock)
     unsetVar_NoVariablesBlock_CompileTime: ${{variables.unsetVar_NoVariablesBlock}}
-    unsetVar_NoVariablesBlock_Runtime: $[ variables['unsetVar_NoVariablesBlock'] ]
+    unsetVar_NoVariablesBlock_Runtime: $[variables.unsetVar_NoVariablesBlock]
 
 - script: |
     echo
@@ -124,19 +124,19 @@ steps:
   env:
     securedVar_Macro: $(securedVar)
     securedVar_CompileTime: ${{variables.securedVar}}
-    securedVar_Runtime: $[ variables['securedVar'] ]
+    securedVar_Runtime: $[variables.securedVar]
     securedVar_NoVariablesBlock_Macro: $(securedVar_NoVariablesBlock)
     securedVar_NoVariablesBlock_CompileTime: ${{variables.securedVar_NoVariablesBlock}}
-    securedVar_NoVariablesBlock_Runtime: $[ variables['securedVar_NoVariablesBlock'] ]
+    securedVar_NoVariablesBlock_Runtime: $[variables.securedVar_NoVariablesBlock]
     publicVar_Macro: $(publicVar)
     publicVar_CompileTime: ${{variables.publicVar}}
-    publicVar_Runtime: $[ variables['publicVar'] ]
+    publicVar_Runtime: $[variables.publicVar]
     publicVar_NoVariablesBlock_Macro: $(publicVar_NoVariablesBlock)
     publicVar_NoVariablesBlock_CompileTime: ${{variables.publicVar_NoVariablesBlock}}
-    publicVar_NoVariablesBlock_Runtime: $[ variables['publicVar_NoVariablesBlock'] ]
+    publicVar_NoVariablesBlock_Runtime: $[variables.publicVar_NoVariablesBlock]
     unsetVar_Macro: $(unsetVar)
     unsetVar_CompileTime: ${{variables.unsetVar}}
-    unsetVar_Runtime: $[ variables['unsetVar'] ]
+    unsetVar_Runtime: $[variables.unsetVar]
     unsetVar_NoVariablesBlock_Macro: $(unsetVar_NoVariablesBlock)
     unsetVar_NoVariablesBlock_CompileTime: ${{variables.unsetVar_NoVariablesBlock}}
-    unsetVar_NoVariablesBlock_Runtime: $[ variables['unsetVar_NoVariablesBlock'] ]
+    unsetVar_NoVariablesBlock_Runtime: $[variables.unsetVar_NoVariablesBlock]
