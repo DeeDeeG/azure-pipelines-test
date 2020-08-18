@@ -1,34 +1,25 @@
 # Modified from: https://developercommunity.visualstudio.com/content/problem/1151302/inconsistent-behavior-between-variablessecuredVar-a.html
 
 variables:
-  securedVar_Mapped:  $[variables.securedVar]
-  publicVar_Mapped:  $[variables.publicVar]
-  unsetVar_Mapped:  $[variables.unsetVar]
+  secured_var_mapped:  $[variables.SECURED_VAR]
+  public_var_Mapped:  $[variables.PUBLIC_VAR]
+  unset_var_mapped:  $[variables.UNSET_VAR]
 
 steps:
 - script: |
-    echo "SECUREDVAR is: $SECUREDVAR"
-    test "$SECUREDVAR" && echo "truthy" || echo "falsy"
-
-    echo "securedVar is: $securedVar"
-    test "$securedVar" && echo "truthy" || echo "falsy"
+    echo "SECURED_VAR is: $SECURED_VAR"
+    test "$SECURED_VAR" && echo "truthy" || echo "falsy"
 
     echo
-    echo "PUBLICVAR is: $PUBLICVAR"
-    test "$PUBLICVAR" && echo "truthy" || echo "falsy"
-
-    echo "publicVar is: $publicVar"
-    test "$publicVar" && echo "truthy" || echo "falsy"
+    echo "PUBLIC_VAR is: $PUBLIC_VAR"
+    test "$PUBLIC_VAR" && echo "truthy" || echo "falsy"
 
     echo
-    echo "UNSETVAR is: $UNSETVAR"
-    test "$UNSETVAR" && echo "truthy" || echo "falsy"
-
-    echo "unsetVar is: $unsetVar"
-    test "$unsetVar" && echo "truthy" || echo "falsy"
+    echo "UNSET_VAR is: $UNSET_VAR"
+    test "$UNSET_VAR" && echo "truthy" || echo "falsy"
 
   env:
-    securedVar: $(securedVar_Mapped)
-    publicVar: $(publicVar_Mapped)
-    unsetVar: $(unsetVar_Mapped)
+    SECURED_VAR: $(secured_var_mapped)
+    PUBLIC_VAR: $(public_var_mapped)
+    UNSET_VAR: $(unset_var_mapped)
     
