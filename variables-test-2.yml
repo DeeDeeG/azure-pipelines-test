@@ -7,9 +7,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  securedVar:  ${{securedVar}}
-  publicVar:  ${{publicVar}}
-  unsetVar:  ${{unsetVar}}
+  securedVar:  ${{variables.securedVar}}
+  publicVar:  ${{variables.publicVar}}
+  unsetVar:  ${{variables.unsetVar}}
 
 steps:
 - script: |      
