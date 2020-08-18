@@ -1,0 +1,39 @@
+# Modified from: https://developercommunity.visualstudio.com/content/problem/1151302/inconsistent-behavior-between-variablessecuredVar-a.html
+
+variables:
+  securedVar_Mapped:  $[variables.securedVar]
+  publicVar_Mapped:  $[variables.publicVar]
+  unsetVar_Mapped:  $[variables.unsetVar]
+
+steps:
+- script: |
+    echo "SECUREDVAR is: $SECUREDVAR"
+    test "$SECUREDVAR" && echo "truthy" || echo "falsy"
+
+    echo
+    echo "securedVar_Mapped_Macro is: $securedVar_Mapped_Macro"
+    test "$securedVar_Mapped_Macro" && echo "truthy" || echo "falsy"
+
+    echo
+    echo
+    echo "PUBLICVAR is: $PUBLICVAR"
+    test "$PUBLICVAR" && echo "truthy" || echo "falsy"
+
+    echo
+    echo "publicVar_Mapped_Macro is: $publicVar_Mapped_Macro"
+    test "$publicVar_Mapped_Macro" && echo "truthy" || echo "falsy"
+
+    echo
+    echo
+    echo "UNSETVAR is: $UNSETVAR"
+    test "$UNSETVAR" && echo "truthy" || echo "falsy"
+
+    echo
+    echo "unsetVar_Mapped_Macro is: $unsetVar_Mapped_Macro"
+    test "$unsetVar_Mapped_Macro" && echo "truthy" || echo "falsy"
+
+  env:
+    securedVar_Mapped_Macro: $(securedVar_Mapped)
+    publicVar_Mapped_Macro: $(publicVar_Mapped)
+    unsetVar_Mapped_Macro: $(unsetVar_Mapped)
+    
