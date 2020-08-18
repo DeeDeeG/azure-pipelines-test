@@ -10,22 +10,22 @@ steps:
     echo "SECUREDVAR is: $SECUREDVAR"
     test "$SECUREDVAR" && echo "truthy" || echo "falsy"
 
-    echo "securedVar_Mapped_Macro is: $securedVar_Mapped_Macro"
-    test "$securedVar_Mapped_Macro" && echo "truthy" || echo "falsy"
+    echo "securedVar is: $securedVar"
+    test "$securedVar" && echo "truthy" || echo "falsy"
 
     echo
     echo "PUBLICVAR is: $PUBLICVAR"
     test "$PUBLICVAR" && echo "truthy" || echo "falsy"
 
-    echo "publicVar_Mapped_Macro is: $publicVar_Mapped_Macro"
-    test "$publicVar_Mapped_Macro" && echo "truthy" || echo "falsy"
+    echo "publicVar is: $publicVar"
+    test "$publicVar" && echo "truthy" || echo "falsy"
 
     echo
     echo "UNSETVAR is: $UNSETVAR"
     test "$UNSETVAR" && echo "truthy" || echo "falsy"
 
-    echo "unsetVar_Mapped_Macro is: $unsetVar_Mapped_Macro"
-    test "$unsetVar_Mapped_Macro" && echo "truthy" || echo "falsy"
+    echo "unsetVar is: $unsetVar"
+    test "$unsetVar" && echo "truthy" || echo "falsy"
 
   env:
     securedVar: $(securedVar_Mapped)
