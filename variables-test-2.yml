@@ -7,17 +7,17 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  securedVar:  $[variables.securedVar]
-  publicVar:  $[variables.publicVar]
-  unsetVar:  $[variables.unsetVar]
+  securedVar_Mapped:  $[variables.securedVar]
+  publicVar_Mapped:  $[variables.publicVar]
+  unsetVar_Mapped:  $[variables.unsetVar]
 
 steps:
 - script: |
     echo 'SECUREDVAR is:'               $SECUREDVAR
     echo 'SECUREDVAR_NOVARIABLESBLOCK is:'               $SECUREDVAR_NOVARIABLESBLOCK
-    echo 'securedVar_Macro is:'         $securedVar_Macro
-    echo 'securedVar_CompileTime is:'   $securedVar_CompileTime
-    echo 'securedVar_Runtime is:'       $securedVar_Runtime
+    echo 'securedVar_Mapped_Macro is:'         $securedVar_Mapped_Macro
+    echo 'securedVar_Mapped_CompileTime is:'   $securedVar_Mapped_CompileTime
+    echo 'securedVar_Mapped_Runtime is:'       $securedVar_Mapped_Runtime
     echo 'securedVar_NoVariablesBlock_Macro is:'       $securedVar_NoVariablesBlock_Macro
     echo 'securedVar_NoVariablesBlock_CompileTime is:' $securedVar_NoVariablesBlock_CompileTime
     echo 'securedVar_NoVariablesBlock_Runtime is:'     $securedVar_NoVariablesBlock_Runtime
@@ -25,9 +25,9 @@ steps:
     echo
     echo 'PUBLICVAR is:'             $PUBLICVAR
     echo 'PUBLICVAR_NOVARIABLESBLOCK is:'             $PUBLICVARNOVARIABLESBLOCK
-    echo 'publicVar_Macro is:'       $publicVar_Macro
-    echo 'publicVar_CompileTime is:' $publicVar_CompileTime
-    echo 'publicVar_Runtime is:'     $publicVar_Runtime
+    echo 'publicVar_Mapped_Macro is:'       $publicVar_Mapped_Macro
+    echo 'publicVar_Mapped_CompileTime is:' $publicVar_Mapped_CompileTime
+    echo 'publicVar_Mapped_Runtime is:'     $publicVar_Mapped_Runtime
     echo 'publicVar_NoVariablesBlock_Macro is:'       $publicVar_NoVariablesBlock_Macro
     echo 'publicVar_NoVariablesBlock_CompileTime is:' $publicVar_NoVariablesBlock_CompileTime
     echo 'publicVar_NoVariablesBlock_Runtime is:'     $publicVar_NoVariablesBlock_Runtime
@@ -35,30 +35,30 @@ steps:
     echo
     echo 'UNSETVAR is:'             $UNSETVAR
     echo 'UNSETVAR_NOVARIABLES_BLOCK is:'             $UNSETVAR_NOVARIABLESBLOCK
-    echo 'unsetVar_Macro is:'       $unsetVar_Macro
-    echo 'unsetVar_CompileTime is:' $unsetVar_CompileTime
-    echo 'unsetVar_Runtime is:'     $unsetVar_Runtime
+    echo 'unsetVar_Mapped_Macro is:'       $unsetVar_Mapped_Macro
+    echo 'unsetVar_Mapped_CompileTime is:' $unsetVar_Mapped_CompileTime
+    echo 'unsetVar_Mapped_Runtime is:'     $unsetVar_Mapped_Runtime
     echo 'unsetVar_NoVariablesBlock_Macro is:'       $unsetVar_NoVariablesBlock_Macro
     echo 'unsetVar_NoVariablesBlock_CompileTime is:' $unsetVar_NoVariablesBlock_CompileTime
     echo 'unsetVar_NoVariablesBlock_Runtime is:'     $unsetVar_NoVariablesBlock_Runtime
 
 
   env:
-    securedVar_Macro: $(securedVar)
-    securedVar_CompileTime: ${{variables.securedVar}}
-    securedVar_Runtime: $[variables.securedVar]
+    securedVar_Mapped_Macro: $(securedVar_Mapped)
+    securedVar_Mapped_CompileTime: ${{variables.securedVar_Mapped}}
+    securedVar_Mapped_Runtime: $[variables.securedVar_Mapped]
     securedVar_NoVariablesBlock_Macro: $(securedVar_NoVariablesBlock)
     securedVar_NoVariablesBlock_CompileTime: ${{variables.securedVar_NoVariablesBlock}}
     securedVar_NoVariablesBlock_Runtime: $[variables.securedVar_NoVariablesBlock]
-    publicVar_Macro: $(publicVar)
-    publicVar_CompileTime: ${{variables.publicVar}}
-    publicVar_Runtime: $[variables.publicVar]
+    publicVar_Mapped_Macro: $(publicVar_Mapped)
+    publicVar_Mapped_CompileTime: ${{variables.publicVar_Mapped}}
+    publicVar_Mapped_Runtime: $[variables.publicVar_Mapped]
     publicVar_NoVariablesBlock_Macro: $(publicVar_NoVariablesBlock)
     publicVar_NoVariablesBlock_CompileTime: ${{variables.publicVar_NoVariablesBlock}}
     publicVar_NoVariablesBlock_Runtime: $[variables.publicVar_NoVariablesBlock]
-    unsetVar_Macro: $(unsetVar)
-    unsetVar_CompileTime: ${{variables.unsetVar}}
-    unsetVar_Runtime: $[variables.unsetVar]
+    unsetVar_Mapped_Macro: $(unsetVar_Mapped)
+    unsetVar_Mapped_CompileTime: ${{variables.unsetVar_Mapped}}
+    unsetVar_Mapped_Runtime: $[variables.unsetVar_Mapped]
     unsetVar_NoVariablesBlock_Macro: $(unsetVar_NoVariablesBlock)
     unsetVar_NoVariablesBlock_CompileTime: ${{variables.unsetVar_NoVariablesBlock}}
     unsetVar_NoVariablesBlock_Runtime: $[variables.unsetVar_NoVariablesBlock]
@@ -69,9 +69,9 @@ steps:
     echo
     echo 'SECUREDVAR is:'               $SECUREDVAR
     echo 'SECUREDVAR_NOVARIABLESBLOCK is:'               $SECUREDVAR_NOVARIABLESBLOCK
-    echo 'securedVar_Macro is:'         $securedVar_Macro
-    echo 'securedVar_CompileTime is:'   $securedVar_CompileTime
-    echo 'securedVar_Runtime is:'       $securedVar_Runtime
+    echo 'securedVar_Mapped_Macro is:'         $securedVar_Mapped_Macro
+    echo 'securedVar_Mapped_CompileTime is:'   $securedVar_Mapped_CompileTime
+    echo 'securedVar_Mapped_Runtime is:'       $securedVar_Mapped_Runtime
     echo 'securedVar_NoVariablesBlock_Macro is:'       $securedVar_NoVariablesBlock_Macro
     echo 'securedVar_NoVariablesBlock_CompileTime is:' $securedVar_NoVariablesBlock_CompileTime
     echo 'securedVar_NoVariablesBlock_Runtime is:'     $securedVar_NoVariablesBlock_Runtime
@@ -79,9 +79,9 @@ steps:
     echo
     echo 'PUBLICVAR is:'             $PUBLICVAR
     echo 'PUBLICVAR_NOVARIABLESBLOCK is:'             $PUBLICVARNOVARIABLESBLOCK
-    echo 'publicVar_Macro is:'       $publicVar_Macro
-    echo 'publicVar_CompileTime is:' $publicVar_CompileTime
-    echo 'publicVar_Runtime is:'     $publicVar_Runtime
+    echo 'publicVar_Mapped_Macro is:'       $publicVar_Mapped_Macro
+    echo 'publicVar_Mapped_CompileTime is:' $publicVar_Mapped_CompileTime
+    echo 'publicVar_Mapped_Runtime is:'     $publicVar_Mapped_Runtime
     echo 'publicVar_NoVariablesBlock_Macro is:'       $publicVar_NoVariablesBlock_Macro
     echo 'publicVar_NoVariablesBlock_CompileTime is:' $publicVar_NoVariablesBlock_CompileTime
     echo 'publicVar_NoVariablesBlock_Runtime is:'     $publicVar_NoVariablesBlock_Runtime
@@ -89,9 +89,9 @@ steps:
     echo
     echo 'UNSETVAR is:'             $UNSETVAR
     echo 'UNSETVAR_NOVARIABLES_BLOCK is:'             $UNSETVAR_NOVARIABLESBLOCK
-    echo 'unsetVar_Macro is:'       $unsetVar_Macro
-    echo 'unsetVar_CompileTime is:' $unsetVar_CompileTime
-    echo 'unsetVar_Runtime is:'     $unsetVar_Runtime
+    echo 'unsetVar_Mapped_Macro is:'       $unsetVar_Mapped_Macro
+    echo 'unsetVar_Mapped_CompileTime is:' $unsetVar_Mapped_CompileTime
+    echo 'unsetVar_Mapped_Runtime is:'     $unsetVar_Mapped_Runtime
     echo 'unsetVar_NoVariablesBlock_Macro is:'       $unsetVar_NoVariablesBlock_Macro
     echo 'unsetVar_NoVariablesBlock_CompileTime is:' $unsetVar_NoVariablesBlock_CompileTime
     echo 'unsetVar_NoVariablesBlock_Runtime is:'     $unsetVar_NoVariablesBlock_Runtime
@@ -99,12 +99,12 @@ steps:
 - script: |
     echo 'SECUREDVAR is:'               $SECUREDVAR
     echo 'SECUREDVAR_NOVARIABLESBLOCK is:'               $SECUREDVAR_NOVARIABLESBLOCK
-    echo 'securedVar_Macro is:'         $securedVar_Macro
-    test "$securedVar_Macro" && echo "truthy" || echo "falsy"
-    echo 'securedVar_CompileTime is:'   $securedVar_CompileTime
-    test "$securedVar_CompileTime" && echo "truthy" || echo "falsy"
-    echo 'securedVar_Runtime is:'       $securedVar_Runtime
-    test "$securedVar_Runtime" && echo "truthy" || echo "falsy"
+    echo 'securedVar_Mapped_Macro is:'         $securedVar_Mapped_Macro
+    test "$securedVar_Mapped_Macro" && echo "truthy" || echo "falsy"
+    echo 'securedVar_Mapped_CompileTime is:'   $securedVar_Mapped_CompileTime
+    test "$securedVar_Mapped_CompileTime" && echo "truthy" || echo "falsy"
+    echo 'securedVar_Mapped_Runtime is:'       $securedVar_Mapped_Runtime
+    test "$securedVar_Mapped_Runtime" && echo "truthy" || echo "falsy"
     echo 'securedVar_NoVariablesBlock_Macro is:'       $securedVar_NoVariablesBlock_Macro
     test "$securedVar_NoVariablesBlock_Macro" && echo "truthy" || echo "falsy"
     echo 'securedVar_NoVariablesBlock_CompileTime is:' $securedVar_NoVariablesBlock_CompileTime
@@ -115,12 +115,12 @@ steps:
     echo
     echo 'PUBLICVAR is:'             $PUBLICVAR
     echo 'PUBLICVAR_NOVARIABLESBLOCK is:'             $PUBLICVARNOVARIABLESBLOCK
-    echo 'publicVar_Macro is:'         $publicVar_Macro
-    test "$publicVar_Macro" && echo "truthy" || echo "falsy"
-    echo 'publicVar_CompileTime is:'   $publicVar_CompileTime
-    test "$publicVar_CompileTime" && echo "truthy" || echo "falsy"
-    echo 'publicVar_Runtime is:'       $publicVar_Runtime
-    test "$publicVar_Runtime" && echo "truthy" || echo "falsy"
+    echo 'publicVar_Mapped_Macro is:'         $publicVar_Mapped_Macro
+    test "$publicVar_Mapped_Macro" && echo "truthy" || echo "falsy"
+    echo 'publicVar_Mapped_CompileTime is:'   $publicVar_Mapped_CompileTime
+    test "$publicVar_Mapped_CompileTime" && echo "truthy" || echo "falsy"
+    echo 'publicVar_Mapped_Runtime is:'       $publicVar_Mapped_Runtime
+    test "$publicVar_Mapped_Runtime" && echo "truthy" || echo "falsy"
     echo 'publicVar_NoVariablesBlock_Macro is:'       $publicVar_NoVariablesBlock_Macro
     test "$publicVar_NoVariablesBlock_Macro" && echo "truthy" || echo "falsy"
     echo 'publicVar_NoVariablesBlock_CompileTime is:' $publicVar_NoVariablesBlock_CompileTime
@@ -131,12 +131,12 @@ steps:
     echo
     echo 'UNSETVAR is:'             $UNSETVAR
     echo 'UNSETVAR_NOVARIABLES_BLOCK is:'             $UNSETVAR_NOVARIABLESBLOCK
-    echo 'unsetVar_Macro is:'         $unsetVar_Macro
-    test "$unsetVar_Macro" && echo "truthy" || echo "falsy"
-    echo 'unsetVar_CompileTime is:'   $unsetVar_CompileTime
-    test "$unsetVar_CompileTime" && echo "truthy" || echo "falsy"
-    echo 'unsetVar_Runtime is:'       $unsetVar_Runtime
-    test "$unsetVar_Runtime" && echo "truthy" || echo "falsy"
+    echo 'unsetVar_Mapped_Macro is:'         $unsetVar_Mapped_Macro
+    test "$unsetVar_Mapped_Macro" && echo "truthy" || echo "falsy"
+    echo 'unsetVar_Mapped_CompileTime is:'   $unsetVar_Mapped_CompileTime
+    test "$unsetVar_Mapped_CompileTime" && echo "truthy" || echo "falsy"
+    echo 'unsetVar_Mapped_Runtime is:'       $unsetVar_Mapped_Runtime
+    test "$unsetVar_Mapped_Runtime" && echo "truthy" || echo "falsy"
     echo 'unsetVar_NoVariablesBlock_Macro is:'       $unsetVar_NoVariablesBlock_Macro
     test "$unsetVar_NoVariablesBlock_Macro" && echo "truthy" || echo "falsy"
     echo 'unsetVar_NoVariablesBlock_CompileTime is:' $unsetVar_NoVariablesBlock_CompileTime
@@ -145,21 +145,21 @@ steps:
     test "$unsetVar_NoVariablesBlock_Runtime" && echo "truthy" || echo "falsy"
 
   env:
-    securedVar_Macro: $(securedVar)
-    securedVar_CompileTime: ${{variables.securedVar}}
-    securedVar_Runtime: $[variables.securedVar]
+    securedVar_Mapped_Macro: $(securedVar_Mapped)
+    securedVar_Mapped_CompileTime: ${{variables.securedVar_Mapped}}
+    securedVar_Mapped_Runtime: $[variables.securedVar_Mapped]
     securedVar_NoVariablesBlock_Macro: $(securedVar_NoVariablesBlock)
     securedVar_NoVariablesBlock_CompileTime: ${{variables.securedVar_NoVariablesBlock}}
     securedVar_NoVariablesBlock_Runtime: $[variables.securedVar_NoVariablesBlock]
-    publicVar_Macro: $(publicVar)
-    publicVar_CompileTime: ${{variables.publicVar}}
-    publicVar_Runtime: $[variables.publicVar]
+    publicVar_Mapped_Macro: $(publicVar_Mapped)
+    publicVar_Mapped_CompileTime: ${{variables.publicVar_Mapped}}
+    publicVar_Mapped_Runtime: $[variables.publicVar_Mapped]
     publicVar_NoVariablesBlock_Macro: $(publicVar_NoVariablesBlock)
     publicVar_NoVariablesBlock_CompileTime: ${{variables.publicVar_NoVariablesBlock}}
     publicVar_NoVariablesBlock_Runtime: $[variables.publicVar_NoVariablesBlock]
-    unsetVar_Macro: $(unsetVar)
-    unsetVar_CompileTime: ${{variables.unsetVar}}
-    unsetVar_Runtime: $[variables.unsetVar]
+    unsetVar_Mapped_Macro: $(unsetVar_Mapped)
+    unsetVar_Mapped_CompileTime: ${{variables.unsetVar_Mapped}}
+    unsetVar_Mapped_Runtime: $[variables.unsetVar_Mapped]
     unsetVar_NoVariablesBlock_Macro: $(unsetVar_NoVariablesBlock)
     unsetVar_NoVariablesBlock_CompileTime: ${{variables.unsetVar_NoVariablesBlock}}
     unsetVar_NoVariablesBlock_Runtime: $[variables.unsetVar_NoVariablesBlock]
