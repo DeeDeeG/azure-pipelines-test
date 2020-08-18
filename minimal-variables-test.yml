@@ -28,7 +28,7 @@ steps:
     test "$unsetVar_Mapped_Macro" && echo "truthy" || echo "falsy"
 
   env:
-    securedVar_Mapped_Macro: $(securedVar_Mapped)
-    publicVar_Mapped_Macro: $(publicVar_Mapped)
-    unsetVar_Mapped_Macro: $(unsetVar_Mapped)
+    securedVar: $(securedVar_Mapped)
+    publicVar: $(publicVar_Mapped)
+    unsetVar: $(unsetVar_Mapped)
     
