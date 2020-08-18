@@ -15,31 +15,32 @@ steps:
 - script: |
     echo 'SECUREDVAR is:'               $SECUREDVAR
     echo 'SECUREDVAR_NOVARIABLESBLOCK is:'               $SECUREDVAR_NOVARIABLESBLOCK
-    echo 'securedVar_Macro is:'         $SECUREDVAR_MACRO
-    echo 'securedVar_CompileTime is:'   $SECUREDVAR_COMPILETIME
-    echo 'securedVar_Runtime is:'       $SECUREDVAR_RUNTIME
-    echo 'securedVar_NoVariablesBlock_Macro is:'       $SECUREDVAR_NOVARIABLESBLOCK_MACRO
-    echo 'securedVar_NoVariablesBlock_CompileTime is:' $SECUREDVAR_NOVARIABLESBLOCK_COMPILETIME
-    echo 'securedVar_NoVariablesBlock_Runtime is:'     $SECUREDVAR_NOVARIABLESBLOCK_RUNTIME
+    echo 'securedVar_Macro is:'         $securedVar_Macro
+    echo 'securedVar_CompileTime is:'   $securedVar_CompileTime
+    echo 'securedVar_Runtime is:'       $securedVar_Runtime
+    echo 'securedVar_NoVariablesBlock_Macro is:'       $securedVar_NoVariablesBlock_Macro
+    echo 'securedVar_NoVariablesBlock_CompileTime is:' $securedVar_NoVariablesBlock_CompileTime
+    echo 'securedVar_NoVariablesBlock_Runtime is:'     $securedVar_NoVariablesBlock_Runtime
 
     echo
     echo 'PUBLICVAR is:'             $PUBLICVAR
     echo 'PUBLICVAR_NOVARIABLESBLOCK is:'             $PUBLICVARNOVARIABLESBLOCK
-    echo 'publicVar_Macro is:'       $PUBLICVAR_MACRO
-    echo 'publicVar_CompileTime is:' $PUBLICVAR_COMPILETIME
-    echo 'publicVar_Runtime is:'     $PUBLICVAR_RUNTIME
-    echo 'publicVar_NoVariablesBlock_Macro is:'       $PUBLICVAR_NOVARIABLESBLOCK_MACRO
-    echo 'publicVar_NoVariablesBlock_CompileTime is:' $PUBLICVAR_NOVARIABLESBLOCK_COMPILETIME
-    echo 'publicVar_NoVariablesBlock_Runtime is:'     $PUBLICVAR_NOVARIABLESBLOCK_RUNTIME
+    echo 'publicVar_Macro is:'       $publicVar_Macro
+    echo 'publicVar_CompileTime is:' $publicVar_CompileTime
+    echo 'publicVar_Runtime is:'     $publicVar_Runtime
+    echo 'publicVar_NoVariablesBlock_Macro is:'       $publicVar_NoVariablesBlock_Macro
+    echo 'publicVar_NoVariablesBlock_CompileTime is:' $publicVar_NoVariablesBlock_CompileTime
+    echo 'publicVar_NoVariablesBlock_Runtime is:'     $publicVar_NoVariablesBlock_Runtime
 
     echo
+    echo 'UNSETVAR is:'             $UNSETVAR
     echo 'UNSETVAR_NOVARIABLES_BLOCK is:'             $UNSETVAR_NOVARIABLESBLOCK
-    echo 'unsetVar_Macro is:'       $UNSETVAR_MACRO
-    echo 'unsetVar_CompileTime is:' $UNSETVAR_COMPILETIME
-    echo 'unsetVar_Runtime is:'     $UNSETVAR_RUNTIME
-    echo 'unsetVar_NoVariablesBlock_Macro is:'       $UNSETVAR_NOVARIABLESBLOCK_MACRO
-    echo 'unsetVar_NoVariablesBlock_CompileTime is:' $UNSETVAR_NOVARIABLESBLOCK_COMPILETIME
-    echo 'unsetVar_NoVariablesBlock_Runtime is:'     $UNSETVAR_NOVARIABLESBLOCK_RUNTIME
+    echo 'unsetVar_Macro is:'       $unsetVar_Macro
+    echo 'unsetVar_CompileTime is:' $unsetVar_CompileTime
+    echo 'unsetVar_Runtime is:'     $unsetVar_Runtime
+    echo 'unsetVar_NoVariablesBlock_Macro is:'       $unsetVar_NoVariablesBlock_Macro
+    echo 'unsetVar_NoVariablesBlock_CompileTime is:' $unsetVar_NoVariablesBlock_CompileTime
+    echo 'unsetVar_NoVariablesBlock_Runtime is:'     $unsetVar_NoVariablesBlock_Runtime
 
 
   env:
@@ -68,80 +69,80 @@ steps:
     echo
     echo 'SECUREDVAR is:'               $SECUREDVAR
     echo 'SECUREDVAR_NOVARIABLESBLOCK is:'               $SECUREDVAR_NOVARIABLESBLOCK
-    echo 'securedVar_Macro is:'         $SECUREDVAR_MACRO
-    echo 'securedVar_CompileTime is:'   $SECUREDVAR_COMPILETIME
-    echo 'securedVar_Runtime is:'       $SECUREDVAR_RUNTIME
-    echo 'securedVar_NoVariablesBlock_Macro is:'       $SECUREDVAR_NOVARIABLESBLOCK_MACRO
-    echo 'securedVar_NoVariablesBlock_CompileTime is:' $SECUREDVAR_NOVARIABLESBLOCK_COMPILETIME
-    echo 'securedVar_NoVariablesBlock_Runtime is:'     $SECUREDVAR_NOVARIABLESBLOCK_RUNTIME
+    echo 'securedVar_Macro is:'         $securedVar_Macro
+    echo 'securedVar_CompileTime is:'   $securedVar_CompileTime
+    echo 'securedVar_Runtime is:'       $securedVar_Runtime
+    echo 'securedVar_NoVariablesBlock_Macro is:'       $securedVar_NoVariablesBlock_Macro
+    echo 'securedVar_NoVariablesBlock_CompileTime is:' $securedVar_NoVariablesBlock_CompileTime
+    echo 'securedVar_NoVariablesBlock_Runtime is:'     $securedVar_NoVariablesBlock_Runtime
 
     echo
     echo 'PUBLICVAR is:'             $PUBLICVAR
     echo 'PUBLICVAR_NOVARIABLESBLOCK is:'             $PUBLICVARNOVARIABLESBLOCK
-    echo 'publicVar_Macro is:'       $PUBLICVAR_MACRO
-    echo 'publicVar_CompileTime is:' $PUBLICVAR_COMPILETIME
-    echo 'publicVar_Runtime is:'     $PUBLICVAR_RUNTIME
-    echo 'publicVar_NoVariablesBlock_Macro is:'       $PUBLICVAR_NOVARIABLESBLOCK_MACRO
-    echo 'publicVar_NoVariablesBlock_CompileTime is:' $PUBLICVAR_NOVARIABLESBLOCK_COMPILETIME
-    echo 'publicVar_NoVariablesBlock_Runtime is:'     $PUBLICVAR_NOVARIABLESBLOCK_RUNTIME
+    echo 'publicVar_Macro is:'       $publicVar_Macro
+    echo 'publicVar_CompileTime is:' $publicVar_CompileTime
+    echo 'publicVar_Runtime is:'     $publicVar_Runtime
+    echo 'publicVar_NoVariablesBlock_Macro is:'       $publicVar_NoVariablesBlock_Macro
+    echo 'publicVar_NoVariablesBlock_CompileTime is:' $publicVar_NoVariablesBlock_CompileTime
+    echo 'publicVar_NoVariablesBlock_Runtime is:'     $publicVar_NoVariablesBlock_Runtime
 
     echo
     echo 'UNSETVAR is:'             $UNSETVAR
     echo 'UNSETVAR_NOVARIABLES_BLOCK is:'             $UNSETVAR_NOVARIABLESBLOCK
-    echo 'unsetVar_Macro is:'       $UNSETVAR_MACRO
-    echo 'unsetVar_CompileTime is:' $UNSETVAR_COMPILETIME
-    echo 'unsetVar_Runtime is:'     $UNSETVAR_RUNTIME
-    echo 'unsetVar_NoVariablesBlock_Macro is:'       $UNSETVAR_NOVARIABLESBLOCK_MACRO
-    echo 'unsetVar_NoVariablesBlock_CompileTime is:' $UNSETVAR_NOVARIABLESBLOCK_COMPILETIME
-    echo 'unsetVar_NoVariablesBlock_Runtime is:'     $UNSETVAR_NOVARIABLESBLOCK_RUNTIME
+    echo 'unsetVar_Macro is:'       $unsetVar_Macro
+    echo 'unsetVar_CompileTime is:' $unsetVar_CompileTime
+    echo 'unsetVar_Runtime is:'     $unsetVar_Runtime
+    echo 'unsetVar_NoVariablesBlock_Macro is:'       $unsetVar_NoVariablesBlock_Macro
+    echo 'unsetVar_NoVariablesBlock_CompileTime is:' $unsetVar_NoVariablesBlock_CompileTime
+    echo 'unsetVar_NoVariablesBlock_Runtime is:'     $unsetVar_NoVariablesBlock_Runtime
 
 - script: |
     echo 'SECUREDVAR is:'               $SECUREDVAR
     echo 'SECUREDVAR_NOVARIABLESBLOCK is:'               $SECUREDVAR_NOVARIABLESBLOCK
-    echo 'securedVar_Macro is:'         $SECUREDVAR_MACRO
-    test "$SECUREDVAR_MACRO" && echo "truthy" || echo "falsy"
-    echo 'securedVar_CompileTime is:'   $SECUREDVAR_COMPILETIME
-    test "$SECUREDVAR_COMPILETIME" && echo "truthy" || echo "falsy"
-    echo 'securedVar_Runtime is:'       $SECUREDVAR_RUNTIME
-    test "$SECUREDVAR_RUNTIME" && echo "truthy" || echo "falsy"
-    echo 'securedVar_NoVariablesBlock_Macro is:'       $SECUREDVAR_NOVARIABLESBLOCK_MACRO
-    test "$SECUREDVAR_NOVARIABLESBLOCK_MACRO" && echo "truthy" || echo "falsy"
-    echo 'securedVar_NoVariablesBlock_CompileTime is:' $SECUREDVAR_NOVARIABLESBLOCK_COMPILETIME
-    test "$SECUREDVAR_NOVARIABLESBLOCK_COMPILETIME" && echo "truthy" || echo "falsy"
-    echo 'securedVar_NoVariablesBlock_Runtime is:'     $SECUREDVAR_NOVARIABLESBLOCK_RUNTIME
-    test "$SECUREDVAR_NOVARIABLESBLOCK_RUNTIME" && echo "truthy" || echo "falsy"
+    echo 'securedVar_Macro is:'         $securedVar_Macro
+    test "$securedVar_Macro" && echo "truthy" || echo "falsy"
+    echo 'securedVar_CompileTime is:'   $securedVar_CompileTime
+    test "$securedVar_CompileTime" && echo "truthy" || echo "falsy"
+    echo 'securedVar_Runtime is:'       $securedVar_Runtime
+    test "$securedVar_Runtime" && echo "truthy" || echo "falsy"
+    echo 'securedVar_NoVariablesBlock_Macro is:'       $securedVar_NoVariablesBlock_Macro
+    test "$securedVar_NoVariablesBlock_Macro" && echo "truthy" || echo "falsy"
+    echo 'securedVar_NoVariablesBlock_CompileTime is:' $securedVar_NoVariablesBlock_CompileTime
+    test "$securedVar_NoVariablesBlock_CompileTime" && echo "truthy" || echo "falsy"
+    echo 'securedVar_NoVariablesBlock_Runtime is:'     $securedVar_NoVariablesBlock_Runtime
+    test "$securedVar_NoVariablesBlock_Runtime" && echo "truthy" || echo "falsy"
 
     echo
     echo 'PUBLICVAR is:'             $PUBLICVAR
     echo 'PUBLICVAR_NOVARIABLESBLOCK is:'             $PUBLICVARNOVARIABLESBLOCK
-    echo 'publicVar_Macro is:'         $PUBLICVAR_MACRO
-    test "$PUBLICVAR_MACRO" && echo "truthy" || echo "falsy"
-    echo 'publicVar_CompileTime is:'   $PUBLICVAR_COMPILETIME
-    test "$PUBLICVAR_COMPILETIME" && echo "truthy" || echo "falsy"
-    echo 'publicVar_Runtime is:'       $PUBLICVAR_RUNTIME
-    test "$PUBLICVAR_RUNTIME" && echo "truthy" || echo "falsy"
-    echo 'publicVar_NoVariablesBlock_Macro is:'       $PUBLICVAR_NOVARIABLESBLOCK_MACRO
-    test "$PUBLICVAR_NOVARIABLESBLOCK_MACRO" && echo "truthy" || echo "falsy"
-    echo 'publicVar_NoVariablesBlock_CompileTime is:' $PUBLICVAR_NOVARIABLESBLOCK_COMPILETIME
-    test "$PUBLICVAR_NOVARIABLESBLOCK_COMPILETIME" && echo "truthy" || echo "falsy"
-    echo 'publicVar_NoVariablesBlock_Runtime is:'     $PUBLICVAR_NOVARIABLESBLOCK_RUNTIME
-    test "$PUBLICVAR_NOVARIABLESBLOCK_RUNTIME" && echo "truthy" || echo "falsy"
+    echo 'publicVar_Macro is:'         $publicVar_Macro
+    test "$publicVar_Macro" && echo "truthy" || echo "falsy"
+    echo 'publicVar_CompileTime is:'   $publicVar_CompileTime
+    test "$publicVar_CompileTime" && echo "truthy" || echo "falsy"
+    echo 'publicVar_Runtime is:'       $publicVar_Runtime
+    test "$publicVar_Runtime" && echo "truthy" || echo "falsy"
+    echo 'publicVar_NoVariablesBlock_Macro is:'       $publicVar_NoVariablesBlock_Macro
+    test "$publicVar_NoVariablesBlock_Macro" && echo "truthy" || echo "falsy"
+    echo 'publicVar_NoVariablesBlock_CompileTime is:' $publicVar_NoVariablesBlock_CompileTime
+    test "$publicVar_NoVariablesBlock_CompileTime" && echo "truthy" || echo "falsy"
+    echo 'publicVar_NoVariablesBlock_Runtime is:'     $publicVar_NoVariablesBlock_Runtime
+    test "$publicVar_NoVariablesBlock_Runtime" && echo "truthy" || echo "falsy"
 
     echo
-    echo 'UNSETVAR is:'               $UNSETVAR
+    echo 'UNSETVAR is:'             $UNSETVAR
     echo 'UNSETVAR_NOVARIABLES_BLOCK is:'             $UNSETVAR_NOVARIABLESBLOCK
-    echo 'unsetVar_Macro is:'         $UNSETVAR_MACRO
-    test "$UNSETVAR_MACRO" && echo "truthy" || echo "falsy"
-    echo 'unsetVar_CompileTime is:'   $UNSETVAR_COMPILETIME
-    test "$UNSETVAR_COMPILETIME" && echo "truthy" || echo "falsy"
-    echo 'unsetVar_Runtime is:'       $UNSETVAR_RUNTIME
-    test "$UNSETVAR_RUNTIME" && echo "truthy" || echo "falsy"
-    echo 'unsetVar_NoVariablesBlock_Macro is:'       $UNSETVAR_NOVARIABLESBLOCK_MACRO
-    test "$UNSETVAR_NOVARIABLESBLOCK_MACRO" && echo "truthy" || echo "falsy"
-    echo 'unsetVar_NoVariablesBlock_CompileTime is:' $UNSETVAR_NOVARIABLESBLOCK_COMPILETIME
-    test "$UNSETVAR_NOVARIABLESBLOCK_COMPILETIME" && echo "truthy" || echo "falsy"
-    echo 'unsetVar_NoVariablesBlock_Runtime is:'     $UNSETVAR_NOVARIABLESBLOCK_RUNTIME
-    test "$UNSETVAR_NOVARIABLESBLOCK_RUNTIME" && echo "truthy" || echo "falsy"
+    echo 'unsetVar_Macro is:'         $unsetVar_Macro
+    test "$unsetVar_Macro" && echo "truthy" || echo "falsy"
+    echo 'unsetVar_CompileTime is:'   $unsetVar_CompileTime
+    test "$unsetVar_CompileTime" && echo "truthy" || echo "falsy"
+    echo 'unsetVar_Runtime is:'       $unsetVar_Runtime
+    test "$unsetVar_Runtime" && echo "truthy" || echo "falsy"
+    echo 'unsetVar_NoVariablesBlock_Macro is:'       $unsetVar_NoVariablesBlock_Macro
+    test "$unsetVar_NoVariablesBlock_Macro" && echo "truthy" || echo "falsy"
+    echo 'unsetVar_NoVariablesBlock_CompileTime is:' $unsetVar_NoVariablesBlock_CompileTime
+    test "$unsetVar_NoVariablesBlock_CompileTime" && echo "truthy" || echo "falsy"
+    echo 'unsetVar_NoVariablesBlock_Runtime is:'     $unsetVar_NoVariablesBlock_Runtime
+    test "$unsetVar_NoVariablesBlock_Runtime" && echo "truthy" || echo "falsy"
 
   env:
     securedVar_Macro: $(securedVar)
