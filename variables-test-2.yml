@@ -12,7 +12,8 @@ variables:
   unsetVar:  ${{variables.unsetVar}}
 
 steps:
-- script: |      
+- script: |
+    echo 'SECUREDVAR is:'               $SECUREDVAR
     echo 'securedVar_Macro is:'         $SECUREDVAR_MACRO
     echo 'securedVar_CompileTime is:'   $SECUREDVAR_COMPILETIME
     echo 'securedVar_Runtime is:'       $SECUREDVAR_RUNTIME
@@ -21,6 +22,7 @@ steps:
     echo 'securedVar_NoVariablesBlock_Runtime is:'     $SECUREDVAR_NOVARIABLESBLOCK_RUNTIME
 
     echo
+    echo 'PUBLICVAR is:'             $PUBLICVAR
     echo 'publicVar_Macro is:'       $PUBLICVAR_MACRO
     echo 'publicVar_CompileTime is:' $PUBLICVAR_COMPILETIME
     echo 'publicVar_Runtime is:'     $PUBLICVAR_RUNTIME
@@ -29,6 +31,7 @@ steps:
     echo 'publicVar_NoVariablesBlock_Runtime is:'     $PUBLICVAR_NOVARIABLESBLOCK_RUNTIME
 
     echo
+    echo 'UNSETVAR is:'             $UNSETVAR
     echo 'unsetVar_Macro is:'       $UNSETVAR_MACRO
     echo 'unsetVar_CompileTime is:' $UNSETVAR_COMPILETIME
     echo 'unsetVar_Runtime is:'     $UNSETVAR_RUNTIME
@@ -61,6 +64,7 @@ steps:
     echo
     echo 'info: No env: block is providfed for these echoes below here!'
     echo
+    echo 'SECUREDVAR is:'               $SECUREDVAR
     echo 'securedVar_Macro is:'         $SECUREDVAR_MACRO
     echo 'securedVar_CompileTime is:'   $SECUREDVAR_COMPILETIME
     echo 'securedVar_Runtime is:'       $SECUREDVAR_RUNTIME
@@ -69,6 +73,7 @@ steps:
     echo 'securedVar_NoVariablesBlock_Runtime is:'     $SECUREDVAR_NOVARIABLESBLOCK_RUNTIME
 
     echo
+    echo 'PUBLICVAR is:'             $PUBLICVAR
     echo 'publicVar_Macro is:'       $PUBLICVAR_MACRO
     echo 'publicVar_CompileTime is:' $PUBLICVAR_COMPILETIME
     echo 'publicVar_Runtime is:'     $PUBLICVAR_RUNTIME
@@ -77,6 +82,7 @@ steps:
     echo 'publicVar_NoVariablesBlock_Runtime is:'     $PUBLICVAR_NOVARIABLESBLOCK_RUNTIME
 
     echo
+    echo 'UNSETVAR is:'             $UNSETVAR
     echo 'unsetVar_Macro is:'       $UNSETVAR_MACRO
     echo 'unsetVar_CompileTime is:' $UNSETVAR_COMPILETIME
     echo 'unsetVar_Runtime is:'     $UNSETVAR_RUNTIME
@@ -84,7 +90,8 @@ steps:
     echo 'unsetVar_NoVariablesBlock_CompileTime is:' $UNSETVAR_NOVARIABLESBLOCK_COMPILETIME
     echo 'unsetVar_NoVariablesBlock_Runtime is:'     $UNSETVAR_NOVARIABLESBLOCK_RUNTIME
 
-- script: |      
+- script: |
+    echo 'SECUREDVAR is:'               $SECUREDVAR
     echo 'securedVar_Macro is:'         $SECUREDVAR_MACRO
     test "$SECUREDVAR_MACRO" && echo "truthy" || echo "falsy"
     echo 'securedVar_CompileTime is:'   $SECUREDVAR_COMPILETIME
@@ -99,6 +106,7 @@ steps:
     test "$SECUREDVAR_NOVARIABLESBLOCK_RUNTIME" && echo "truthy" || echo "falsy"
 
     echo
+    echo 'PUBLICVAR is:'               $PUBLICVAR
     echo 'publicVar_Macro is:'         $PUBLICVAR_MACRO
     test "$PUBLICVAR_MACRO" && echo "truthy" || echo "falsy"
     echo 'publicVar_CompileTime is:'   $PUBLICVAR_COMPILETIME
@@ -113,6 +121,7 @@ steps:
     test "$PUBLICVAR_NOVARIABLESBLOCK_RUNTIME" && echo "truthy" || echo "falsy"
 
     echo
+    echo 'UNSETVAR is:'               $UNSETVAR
     echo 'unsetVar_Macro is:'         $UNSETVAR_MACRO
     test "$UNSETVAR_MACRO" && echo "truthy" || echo "falsy"
     echo 'unsetVar_CompileTime is:'   $UNSETVAR_COMPILETIME
