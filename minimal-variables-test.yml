@@ -24,7 +24,6 @@ steps:
     echo "UNSETVAR is: $UNSETVAR"
     test "$UNSETVAR" && echo "truthy" || echo "falsy"
 
-    echo
     echo "unsetVar_Mapped_Macro is: $unsetVar_Mapped_Macro"
     test "$unsetVar_Mapped_Macro" && echo "truthy" || echo "falsy"
 
