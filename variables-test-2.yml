@@ -6,6 +6,11 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+  securedVar:  $[ variables['securedVar'] ]
+  publicVar:  $[ variables['publicVar'] ]
+  unsetVar:  $[ variables['unsetVar'] ]
+
 steps:
 - script: |      
     echo 'securedVar_Macro is:'         $securedVar_Macro
