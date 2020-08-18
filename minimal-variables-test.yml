@@ -10,20 +10,16 @@ steps:
     echo "SECUREDVAR is: $SECUREDVAR"
     test "$SECUREDVAR" && echo "truthy" || echo "falsy"
 
-    echo
     echo "securedVar_Mapped_Macro is: $securedVar_Mapped_Macro"
     test "$securedVar_Mapped_Macro" && echo "truthy" || echo "falsy"
 
     echo
-    echo
     echo "PUBLICVAR is: $PUBLICVAR"
     test "$PUBLICVAR" && echo "truthy" || echo "falsy"
 
-    echo
     echo "publicVar_Mapped_Macro is: $publicVar_Mapped_Macro"
     test "$publicVar_Mapped_Macro" && echo "truthy" || echo "falsy"
 
-    echo
     echo
     echo "UNSETVAR is: $UNSETVAR"
     test "$UNSETVAR" && echo "truthy" || echo "falsy"
