@@ -1,8 +1,5 @@
 # From: https://developercommunity.visualstudio.com/content/problem/1151302/inconsistent-behavior-between-variablessecuredVar-a.html
 
-trigger:
-- master
-
 pool:
   vmImage: 'ubuntu-latest'
 
