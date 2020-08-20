@@ -1,9 +1,9 @@
 # Modified from: https://developercommunity.visualstudio.com/content/problem/1151302/inconsistent-behavior-between-variablessecuredVar-a.html
 
 variables:
-  secured_var_mapped:  ${{ variables.SECURED_VAR }}
-  public_var_Mapped:  ${{ variables.PUBLIC_VAR }}
-  unset_var_mapped:  ${{ variables.UNSET_VAR }}
+  secured_var_mapped:  $[variables.SECURED_VAR]
+  public_var_Mapped:  $[variables.PUBLIC_VAR]
+  unset_var_mapped:  $[variables.UNSET_VAR]
 
 steps:
 - script: |
@@ -19,3 +19,4 @@ steps:
     SECURED_VAR: $(secured_var_mapped)
     PUBLIC_VAR: $(public_var_mapped)
     UNSET_VAR: $(unset_var_mapped)
+    
