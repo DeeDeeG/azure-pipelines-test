@@ -1,10 +1,5 @@
 # Modified from: https://developercommunity.visualstudio.com/content/problem/1151302/inconsistent-behavior-between-variablessecuredVar-a.html
 
-variables:
-  SECURED_VAR:  $[variables.SECURED_VAR]
-  PUBLIC_VAR:  $[variables.PUBLIC_VAR]
-  UNSET_VAR:  $[variables.UNSET_VAR]
-
 steps:
 - script: |
     echo "SECURED_VAR is: $SECURED_VAR"
@@ -19,7 +14,7 @@ steps:
     test "$UNSET_VAR" && echo "truthy" || echo "falsy"
 
   env:
-    SECURED_VAR: $(SECURED_VAR)
-    PUBLIC_VAR: $(PUBLIC_VAR)
-    UNSET_VAR: $(UNSET_VAR)
+    SECURED_VAR: $[variables.SECURED_VAR]
+    PUBLIC_VAR: $[variables.PUBLIC_VAR]
+    UNSET_VAR: $[variables.UNSET_VAR]
     
