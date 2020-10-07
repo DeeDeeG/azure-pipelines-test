@@ -6,10 +6,10 @@ parameters:
 steps:
 
   # Common
-  - bash: if [ ${BUILD_ARCH} = "x86" ]; then echo "##vso[task.setvariable variable=NODE_ARCH]true"; fi
+  - bash: if [ "${BUILD_ARCH}" = "x86" ]; then echo "##vso[task.setvariable variable=NODE_ARCH]true"; fi
 
   - task: NodeTool@0
     inputs:
       versionSpec: 12.16.3
-      force32bit: eq( $(BUILD_ARCH), 'x86')
+      force32bit: ${{ eq($(BUILD_ARCH), 'x86') }}
     displayName: Install Node.js v12.16.3
