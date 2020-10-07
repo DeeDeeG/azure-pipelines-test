@@ -3,5 +3,5 @@ steps:
   # Common
   - task: NodeTool@0
     inputs:
-      versionSpec: ${{variables.NODE_VERSION}}
+      versionSpec: ${{variables['NODE_VERSION']}}
     displayName: Install Node.js v???
