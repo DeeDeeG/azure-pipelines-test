@@ -3,5 +3,5 @@ steps:
   # Common
   - task: NodeTool@0
     inputs:
-      versionSpec: 12.16.3
+      versionSpec: $[variables.NODE_VERSION]
     displayName: Install Node.js 12.16.3
