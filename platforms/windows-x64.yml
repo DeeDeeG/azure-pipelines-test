@@ -1,0 +1,14 @@
+jobs:
+  - job: Windows_build_x64
+    displayName: Windows Build x64
+    variables:
+      BUILD_ARCH: x64
+      RunCoreMainTests: true
+
+    pool:
+      vmImage: vs2017-win2016
+
+    steps:
+      - template: templates/preparation.yml
+        parameters:
+          force32BitNode: false
