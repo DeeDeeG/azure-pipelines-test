@@ -1,6 +1,8 @@
 jobs:
   - job: Windows_build
     displayName: Windows Build
+    variables:
+      _BUILD_ARCH:  $[ variables.BUILD_ARCH ]
 
     strategy:
       maxParallel: 2
