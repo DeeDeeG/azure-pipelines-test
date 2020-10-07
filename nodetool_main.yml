@@ -1,0 +1,9 @@
+
+trigger: none # No CI builds, only PR builds
+
+jobs:
+
+  # Import OS-specific build definitions
+  - template: platforms/windows.yml
+  - template: platforms/macos.yml
+  - template: platforms/linux.yml
