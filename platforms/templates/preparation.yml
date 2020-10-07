@@ -11,5 +11,5 @@ steps:
   - task: NodeTool@0
     inputs:
       versionSpec: 12.16.3
-      force32bit: ${{ parameters.force32BitNode }}
+      force32bit: $(NODE_ARCH)
     displayName: Install Node.js v12.16.3
