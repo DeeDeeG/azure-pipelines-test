@@ -1,0 +1,9 @@
+jobs:
+  - job: macOS_build
+    displayName: macOS Build
+
+    pool:
+      vmImage: macos-10.14
+
+    steps:
+      - template: templates/preparation.yml
