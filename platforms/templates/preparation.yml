@@ -1,5 +1,7 @@
-variables:
-  force32BitNode: eq(variables.BUILD_ARCH, 'x86')
+parameters:
+- name: force32BitNode
+  type: boolean
+  default: false
 
 steps:
 
@@ -7,5 +9,5 @@ steps:
   - task: NodeTool@0
     inputs:
       versionSpec: 12.16.3
-      force32bit: ${{ variables.force32BitNode }}
+      force32bit: ${{ parameters.force32BitNode }}
     displayName: Install Node.js v12.16.3
