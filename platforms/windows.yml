@@ -20,4 +20,4 @@ jobs:
     steps:
       - template: templates/preparation.yml
         parameters:
-          force32BitNode: ${{ eq(variables.BUILD_ARCH, 'x86') }}
+          force32BitNode: ${{ ne(variables.BUILD_ARCH, 'x86') }}
