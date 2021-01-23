@@ -10,7 +10,7 @@ pool:
 
 steps:
 
-- checkout: 
+- checkout: self
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
