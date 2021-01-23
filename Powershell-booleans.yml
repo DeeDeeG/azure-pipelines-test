@@ -31,6 +31,36 @@ steps:
     }
 
 - pwsh: |
+    if ( $env:not_set -eq $False ) {
+      echo "equal"
+    } else {
+      echo "not equal"
+    }
+
+- pwsh: |
+    if ( $env:not_set -eq $True ) {
+      echo "equal"
+    } else {
+      echo "not equal"
+    }
+
+- pwsh: |
+    $env:set = $True
+    if ( $env:set -eq $True ) {
+      echo "equal"
+    } else {
+      echo "not equal"
+    }
+
+- pwsh: |
+    $env:set = $True
+    if ( $env:set -eq $False ) {
+      echo "equal"
+    } else {
+      echo "not equal"
+    }
+
+- pwsh: |
     if ( False -eq $False ) {
       echo "equal"
     } else {
