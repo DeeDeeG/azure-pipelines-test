@@ -3,16 +3,57 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- main
+trigger: none
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
 - pwsh: |
-  if ( True -eq True ) {
-    echo "true"
-  } else {
-    echo "false"
-  }
+    if ( $True -eq $True ) {
+      echo "true"
+    } else {
+      echo "false"
+    }
+
+- pwsh: |
+    if ( $False -eq $False ) {
+      echo "equal"
+    } else {
+      echo "not equal"
+    }
+
+- pwsh: |
+    if ( $True -eq $False ) {
+      echo "equal"
+    } else {
+      echo "not equal"
+    }
+
+- pwsh: |
+    if ( False -eq $False ) {
+      echo "equal"
+    } else {
+      echo "not equal"
+    }
+
+- pwsh: |
+    if ( True -eq $True ) {
+      echo "equal"
+    } else {
+      echo "not equal"
+    }
+
+- pwsh: |
+    if ( $False -eq $False ) {
+      echo "equal"
+    } else {
+      echo "not equal"
+    }
+
+- pwsh: |
+    if ( False -eq $True ) {
+      echo "equal"
+    } else {
+      echo "not equal"
+    }
