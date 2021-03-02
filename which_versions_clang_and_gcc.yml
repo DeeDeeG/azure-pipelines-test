@@ -1,4 +1,3 @@
-displayName: Which GCC, which Clang?
 strategy:
   matrix:
     Ubuntu-16.04-Xenial:
