@@ -1,5 +1,15 @@
+displayName: Which GCC, which Clang?
+strategy:
+  matrix:
+    Ubuntu-16.04-Xenial:
+      imageName: 'ubuntu-16.04'
+    Ubuntu-18.04-Bionic:
+      imageName: 'ubuntu-18.04'
+    Ubuntu-20.04-Focal:
+      imageName: 'ubuntu-20.04'
+
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: $(imageName)
 
 steps:
 - bash: |
