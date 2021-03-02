@@ -1,0 +1,21 @@
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- bash: |
+    echo "which -a clang:"
+    which -a clang
+    echo "clang --version:"
+    clang --version
+    echo "which -a clang++:"
+    which -a clang++
+    echo "clang++ --version:"
+    clang++ --version
+    echo "which -a gcc:"
+    which -a gcc
+    echo "gcc --version:"
+    gcc --version
+    echo "which -a g++:"
+    which -a g++
+    echo "g++ --version:"
+    g++ --version
