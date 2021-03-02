@@ -5,17 +5,24 @@ steps:
 - bash: |
     echo "which -a clang:"
     which -a clang
+    echo
     echo "clang --version:"
     clang --version
+    echo
     echo "which -a clang++:"
     which -a clang++
+    echo
     echo "clang++ --version:"
     clang++ --version
+    echo
     echo "which -a gcc:"
     which -a gcc
+    echo
     echo "gcc --version:"
     gcc --version
+    echo
     echo "which -a g++:"
     which -a g++
+    echo
     echo "g++ --version:"
     g++ --version
